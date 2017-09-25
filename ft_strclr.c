@@ -6,26 +6,12 @@
 /*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/23 06:45:51 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 11:43:35 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/09/25 13:38:30 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 void ft_strclr(char *s)
 {
 	while (s)
 		*s++ = '\0';
-}
-
-int main() {
-
-	char *s = "hello";
-	printf("%s\n", s);
-	ft_strclr(s);
-	if(!s)
-		printf("test");
-	else
-		printf("%s\n", s);
-	return(0);
 }

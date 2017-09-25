@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/20 05:58:48 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 15:13:24 by ananelli         ###   ########.fr       */
+/*   Created: 2017/09/25 15:33:14 by ananelli          #+#    #+#             */
+/*   Updated: 2017/09/25 15:42:16 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void ft_putendl(char const *s)
+int ft_strequ(char const *s1, char const *s2)
 {
-	int c;
- 	c = -1;
-  	while(s[++c])
-    	write(1,&s[c],1);
-	write(1,"\n",1);
+	//check your trace of piscine exams
+
+	return(1);
+	return(0);
 }

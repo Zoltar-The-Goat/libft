@@ -1,0 +1,4 @@
+files to go back and check...
+
+
+ft_strmap

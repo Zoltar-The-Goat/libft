@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/20 05:58:48 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 15:13:24 by ananelli         ###   ########.fr       */
+/*   Created: 2017/09/25 15:47:16 by ananelli          #+#    #+#             */
+/*   Updated: 2017/09/25 16:16:26 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void ft_putendl(char const *s)
+size_t strlcat(char * restrict dst, const char * restrict src, size_t size)
 {
-	int c;
- 	c = -1;
-  	while(s[++c])
-    	write(1,&s[c],1);
-	write(1,"\n",1);
+
+
 }

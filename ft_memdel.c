@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 11:42:31 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/25 11:43:19 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/09/25 14:56:54 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,10 @@ void ft_putnbr(int n)
 	if (n >= 9)
 		ft_putnbr(n / 10);
 	ft_putchar((n % 10) + '0');
+}
+
+int main()
+{
+	ft_putnbr(6);
+	return(0);
 }

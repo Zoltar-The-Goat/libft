@@ -6,11 +6,11 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/11 00:49:04 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/25 11:44:44 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/09/25 15:14:07 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
+#include "libft.h"
 
 void	ft_putstr(char *str)
 {

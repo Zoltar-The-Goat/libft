@@ -6,11 +6,9 @@
 /*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 01:42:48 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 11:42:59 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/09/25 15:10:04 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
 
 void *ft_memalloc(size_t size)
 {

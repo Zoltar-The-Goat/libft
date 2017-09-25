@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/11 10:13:48 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/25 15:27:22 by ananelli         ###   ########.fr       */
+/*   Created: 2017/09/25 13:39:54 by ananelli          #+#    #+#             */
+/*   Updated: 2017/09/25 15:30:30 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int		ft_atoi(char *str)
+char * ft_strmap(char const *s, char (*f)(char))
 {
-	int num;
-	int count;
-	int sign;
+	char * rstr;
+	rstr = (char *)malloc(sizeof(char) * ft_strlen(s));
+	while (s)
+	{
+		*rstr = f(*s);
+		s++;
+		rstr++;
+	}
+	return (rstr);
+}
 
-	sign = 1;
-	count = 0;
-	if (str[0] == '-')
-	{
-		sign = -1;
-		count++;
-	}
-	while (str[count] != '\0')
-	{
-		if (ft_isdigit(str[count]) == 0)
-			break ;
-		num = num * 10 + str[count] - '0';
-		count++;
-	}
-	return (sign * num);
+char func1(char c)
+{
+	return(c - 32);
+}
+
+int main()
+{
+	char *str = "hello";
+	ft_strmap(str, func1);
+	printf("\n%s\n", str);
+	return(0);
 }

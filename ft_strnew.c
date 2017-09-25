@@ -6,11 +6,13 @@
 /*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 01:55:10 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 11:43:39 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/09/25 15:15:40 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char * ft_strnew(size_t size)
+{
 	return((char *)malloc(size));
+}

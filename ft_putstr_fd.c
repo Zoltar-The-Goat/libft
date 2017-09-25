@@ -6,11 +6,11 @@
 /*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 01:34:00 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 11:43:33 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/09/25 15:14:08 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftlib.h"
+#include "libft.h"
 
 void ft_putstr_fd(char const *s, int fd)
 {
