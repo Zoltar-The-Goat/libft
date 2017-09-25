@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/23 06:45:51 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 11:43:35 by ananelli         ###   ########.fr       */
+/*   Created: 2017/09/19 07:34:55 by ananelli          #+#    #+#             */
+/*   Updated: 2017/09/25 11:43:26 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void ft_strclr(char *s)
+int ft_isascii(int c)
 {
-	while (s)
-		*s++ = '\0';
-}
-
-int main() {
-
-	char *s = "hello";
-	printf("%s\n", s);
-	ft_strclr(s);
-	if(!s)
-		printf("test");
-	else
-		printf("%s\n", s);
-	return(0);
+	if ( c >= 0 && c <= 127)
+		return (c);
+	return (0);
 }

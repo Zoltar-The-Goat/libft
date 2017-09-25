@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/23 06:45:51 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 11:43:35 by ananelli         ###   ########.fr       */
+/*   Created: 2017/08/16 13:40:10 by ananelli          #+#    #+#             */
+/*   Updated: 2017/09/25 11:44:38 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void ft_strclr(char *s)
+void	ft_putchar(char c)
 {
-	while (s)
-		*s++ = '\0';
-}
-
-int main() {
-
-	char *s = "hello";
-	printf("%s\n", s);
-	ft_strclr(s);
-	if(!s)
-		printf("test");
-	else
-		printf("%s\n", s);
-	return(0);
+	write(1, &c, 1);
 }

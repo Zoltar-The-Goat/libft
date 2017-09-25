@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/23 06:45:51 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 11:43:35 by ananelli         ###   ########.fr       */
+/*   Created: 2017/08/17 04:19:29 by ananelli          #+#    #+#             */
+/*   Updated: 2017/09/25 11:43:41 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
+#include "libft.h"
 
-void ft_strclr(char *s)
+char	*ft_strdup(char *src)
 {
-	while (s)
-		*s++ = '\0';
-}
+	char *dest;
 
-int main() {
-
-	char *s = "hello";
-	printf("%s\n", s);
-	ft_strclr(s);
-	if(!s)
-		printf("test");
-	else
-		printf("%s\n", s);
-	return(0);
+	dest = (char*)malloc(ft_strlen(src));
+	return (ft_strcpy(dest, src));
 }
