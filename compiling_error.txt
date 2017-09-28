@@ -1,0 +1,5 @@
+/home/zoltar/42/libft/ft_strnequ.c: In function ‘ft_strnequ’:
+/home/zoltar/42/libft/ft_strnequ.c:15:28: error: parameter ‘s1’ set but not used [-Werror=unused-but-set-parameter]
+ int ft_strnequ(char const *s1, char const *s2,size_t n)
+                            ^~
+cc1: all warnings being treated as errors
