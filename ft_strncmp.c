@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 15:51:08 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/28 15:01:37 by zoltar           ###   ########.fr       */
+/*   Updated: 2017/09/26 17:08:37 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	s2 = s1;
-	n++;
-	s2++;
+	n = 0;
 	return(0);
 }

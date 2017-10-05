@@ -6,13 +6,17 @@
 /*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 01:55:10 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 15:15:40 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/03 04:14:35 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strnew(size_t size)
+char *ft_strnew(size_t size)
 {
-	return((char *)malloc(size));
+	char *n_str;
+	if (!(n_str = (char *)malloc(size + 1)))
+		return(NULL);
+	ft_memset(n_str, (int)'\0', size + 1);
+	return(n_str);
 }

@@ -6,14 +6,17 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 15:55:13 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/28 15:05:03 by zoltar           ###   ########.fr       */
+/*   Updated: 2017/10/03 10:58:16 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char **ft_strsplit(char const *s, char c)
 {
-	c++;
-	s++;
-	char **a = 0;
-	return(a);
+	if(s && *s)
+	{
+		c++;
+	}
+	return(NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 15:12:34 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/26 17:18:52 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:30:39 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
-		return (c);
+		return (1);
 	return (0);
 }

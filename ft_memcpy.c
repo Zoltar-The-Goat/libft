@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 16:13:00 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/28 15:06:14 by zoltar           ###   ########.fr       */
+/*   Updated: 2017/10/03 10:12:40 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 
 void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	n++;
-	dst = (void *)src;
+	unsigned char *n_src;
+	unsigned char *n_dst;
+
+	n_src = (unsigned char *)src;
+	n_dst = (unsigned char *)dst;
+	while(n--)
+		*n_dst++ = *n_src++;
 	return(dst);
 }

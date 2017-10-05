@@ -6,11 +6,13 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 16:32:35 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/26 16:57:55 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:42:19 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_tolower(int c)
 {
+	if (c >= 97 && c <= 122)
+		return(c - 32);
 	return (c);
 }

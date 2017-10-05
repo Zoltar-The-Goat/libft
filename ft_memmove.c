@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 16:14:27 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/28 14:57:50 by zoltar           ###   ########.fr       */
+/*   Updated: 2017/09/26 17:01:50 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void *ft_memmove(void *dst, const void *src, size_t len)
 {
-	len++;
-	src++;
+	len = 0;
+	src = "testing";
 	return(dst);
 }

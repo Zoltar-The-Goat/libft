@@ -6,13 +6,13 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 07:16:05 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/25 11:44:31 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:30:26 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-		return (c);
+		return (1);
 	return (0);
 }

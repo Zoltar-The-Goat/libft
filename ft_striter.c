@@ -6,12 +6,12 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 13:30:00 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/26 16:52:55 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/03 02:51:41 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void ft_striter(char *s, void (*f)(char *))
 {
-	while(s)
+	while(s && *s)
 		f(s++);
 }

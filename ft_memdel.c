@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 11:42:31 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/28 15:02:30 by zoltar           ###   ########.fr       */
+/*   Updated: 2017/10/03 00:46:29 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void ft_memdel(void **ap)
 {
-	ap = (void**)malloc(10 * sizeof(void*));
-	ap++;
+	if(ap)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 }

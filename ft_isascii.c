@@ -6,13 +6,13 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 07:34:55 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/25 11:43:26 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:30:19 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_isascii(int c)
 {
 	if ( c >= 0 && c <= 127)
-		return (c);
+		return (1);
 	return (0);
 }

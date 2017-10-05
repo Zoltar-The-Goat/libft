@@ -6,7 +6,7 @@
 /*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 01:39:34 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 11:43:32 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:15:55 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 void ft_putnbr_fd(int n, int fd)
 {
+	if(n == -2147483648)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
+	}
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);

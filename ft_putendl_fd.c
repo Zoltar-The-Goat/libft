@@ -6,7 +6,7 @@
 /*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 01:37:14 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/25 15:13:27 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:07:33 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void ft_putendl_fd(char const *s, int fd)
 {
 	int c;
 	c = -1;
-	while(s[++c])
-		write(fd,&s[c],1);
+	if(s)	
+		while(s[++c])
+			write(fd,&s[c],1);
 	write(fd,"\n",1);
 }

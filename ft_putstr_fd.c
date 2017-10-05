@@ -6,7 +6,7 @@
 /*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 01:34:00 by zoltar            #+#    #+#             */
-/*   Updated: 2017/09/26 16:59:26 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:07:48 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void ft_putstr_fd(char const *s, int fd)
 {
 	int c;
 	c = -1;
-	while (s[++c])
-		ft_putchar_fd(s[c],fd);
+	if(s)
+		while (s[++c])
+			ft_putchar_fd(s[c],fd);
 }
