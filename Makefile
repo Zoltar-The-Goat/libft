@@ -29,6 +29,7 @@ SRC = ft_isprint.c ft_memset.c ft_strcat.c ft_striteri.c ft_strnequ.c \
 OBJ = *.o
 
 all		:	$(NAME)
+
 $(NAME)	:
 				gcc $(FLAG) $(OPTION) $(SRC)
 				ar rcs $(NAME) $(OBJ)

@@ -16,21 +16,33 @@ char *ft_strtrim(char const *s)
 {
 	char *n_str;
 	int c;
+
 	if(s)
 	{
-		n_str = ft_strnew(sizeof(s));
-		n_str = ft_strcpy(n_str, (char *)s);
-		c = 0;
+		c = -1;
+		n_str = (char *)malloc(sizeof(ft_strlen(s) + 1));
 		if(n_str)
 		{
-			if(n_str && ft_isspace(n_str[c]))
-				while(n_str[++c] != '\0')
-					n_str[c - 1] = n_str[c];
-			c--;
-			if (n_str && ft_isspace(n_str[c]))
-				n_str[c] = '\0';
-			return(n_str);
+			while (s[++c])
+			{
+				if(s[0] == '\n' || s[0] == '\t' || s[0] == ' ')
+					n_str[c] = s[c + 1];
+				else
+					n_str[c] = s[c];
+			}
+			if(s[c - 1] == '\n' || s[c - 1] == '\t' || s[c - 1] == ' ')
+				(s[0] == '\n' || s[0] == '\t' || s[0] == ' ') ? c = c - 2 : c--;
+			n_str[c] = '\0';
 		}
+		return (n_str);
 	}
 	return(NULL);
+}
+
+int main()
+{
+	char const *s = "     ";
+	printf("%s\n",s);
+	printf("%s\n",ft_strtrim(s));
+	return(0);
 }

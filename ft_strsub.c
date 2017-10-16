@@ -15,20 +15,23 @@
 char * ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char *n_str;
+	int c;
 
-	if(s && start && len)
+	if(s)
 	{
+		c = -1;
 		n_str = (char *)malloc(len);
 		if(n_str)
 		{
-			while(len)
+			while(++c < (int)len)
 			{
-				n_str[start] = s[start];
+				n_str[c] = s[start];
 				start++;
-				len--;
 			}
+			n_str[c] = '\0';
 			return(n_str);
 		}
+		free(n_str);
 	}
 	return(NULL);
 }

@@ -14,7 +14,16 @@
 
 char * ft_strncpy(char * dst, const char * src, size_t len)
 {
-	len = 0;
-	src = "testing";
-	return(dst);
+	int index;
+	char *n_src;
+
+	n_src = (char *)src;
+	index = 0;
+	while (n_src[index] != '\0' && len--)
+	{
+		dst[index] = n_src[index];
+		index++;
+	}
+	dst[index] = '\0';
+	return (dst);
 }

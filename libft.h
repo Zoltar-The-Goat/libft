@@ -15,6 +15,10 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+// REMOVE WHEN DONE !!!!
+#include <stdio.h>
+// REMOVE WHEN DONE !!!!
+
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
@@ -32,6 +36,7 @@ typedef struct s_list
 
 	int		ft_isdigit(int c);
 	int		ft_isalpha(int c);
+	int		ft_strlen(const char *str);
 	int 	ft_isspace(char c);
 	int		ft_strlen(const char *str);
 
@@ -40,3 +45,15 @@ typedef struct s_list
 	char	*ft_strcpy(char *dest, char *src);
 
 #endif
+
+
+
+
+
+
+
+
+
+
+
+
