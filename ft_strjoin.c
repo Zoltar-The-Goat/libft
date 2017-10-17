@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 15:53:12 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/03 10:38:16 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/16 22:04:03 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,14 @@
 char * ft_strjoin(char const *s1, char const *s2)
 {
 	char * n_str;
-	size_t n_size;
 	int c;
 	int i;
 
 	i = -1;
 	c = -1;
-	n_size = sizeof(s1) + sizeof(s2) + 1;
 	if(s1 && s2)
 	{
-		n_str = (char *)malloc(n_size);
+		n_str = (char *)ft_memalloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 		if(n_str)
 		{
 			while(s1[++c])

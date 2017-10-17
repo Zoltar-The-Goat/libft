@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 15:53:38 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/03 11:04:51 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/17 04:04:46 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,39 @@
 
 char *ft_strtrim(char const *s)
 {
-	char *n_str;
-	int c;
+	char *ret_s;
 
+	int total;
+	int first_c;
+	int last_c;
+
+	total = ft_strlen(s);
 	if(s)
 	{
-		c = -1;
-		n_str = (char *)malloc(sizeof(ft_strlen(s) + 1));
-		if(n_str)
-		{
-			while (s[++c])
-			{
-				if(s[0] == '\n' || s[0] == '\t' || s[0] == ' ')
-					n_str[c] = s[c + 1];
-				else
-					n_str[c] = s[c];
-			}
-			if(s[c - 1] == '\n' || s[c - 1] == '\t' || s[c - 1] == ' ')
-				(s[0] == '\n' || s[0] == '\t' || s[0] == ' ') ? c = c - 2 : c--;
-			n_str[c] = '\0';
-		}
-		return (n_str);
+		if(!s)
+			return(NULL);
+		while(ft_isspace(*s))
+			s++;
+		first_c = ft_strlen(s);
+		while(*s)
+			s++;
+		s--;
+		while(ft_isspace(*s))
+			 s--;
+		last_c = ft_strlen(s);
+		ret_s = (char *)ft_memalloc((total - last_c) - (total - first_c));
+		printf("%s\n", ret_s);
+		while(last_c <= first_c)
+			*ret_s++ = s[last_c++];
+		return(ret_s);
 	}
 	return(NULL);
 }
 
 int main()
 {
-	char const *s = "     ";
-	printf("%s\n",s);
-	printf("%s\n",ft_strtrim(s));
+	char *s = " hello ";
+	printf("test : %s\n", s);
+	printf("test : %s\n", ft_strtrim((char const *)s));
 	return(0);
 }

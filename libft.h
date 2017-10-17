@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 14:34:32 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/03 10:45:07 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/16 19:28:24 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ typedef struct s_list
 	int 	ft_isspace(char c);
 	int		ft_strlen(const char *str);
 
+	void	*ft_memalloc(size_t size);
 	void 	*ft_memset(void *b, int c, size_t len);
 	char	*ft_strnew(size_t size);
 	char	*ft_strcpy(char *dest, char *src);

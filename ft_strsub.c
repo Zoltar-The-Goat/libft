@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 15:52:44 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/03 10:17:51 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/16 19:25:55 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char * ft_strsub(char const *s, unsigned int start, size_t len)
 	if(s)
 	{
 		c = -1;
-		n_str = (char *)malloc(len);
+		n_str = (char *)ft_memalloc(len + 1);
 		if(n_str)
 		{
 			while(++c < (int)len)

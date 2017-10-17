@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 16:16:03 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/26 17:18:28 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/16 22:01:52 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		while(n--)
 		{
-			if(*str1 != *str2)
-				return((int)(*str1 - *str2));
+			if(*str1++ != *str2++)
+				return(*str1 - *str2);
 		}
 	}
 	return(0);
