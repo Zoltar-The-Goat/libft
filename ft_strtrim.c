@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 15:53:38 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/17 04:04:46 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/23 22:13:14 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,29 @@
 
 char *ft_strtrim(char const *s)
 {
-	char *ret_s;
-
+	char * ret_s;
+	char * original;
 	int total;
 	int first_c;
 	int last_c;
 
-	total = ft_strlen(s);
 	if(s)
 	{
-		if(!s)
-			return(NULL);
+		original = (char *)s;
+		total = ft_strlen(s);
+
 		while(ft_isspace(*s))
 			s++;
-		first_c = ft_strlen(s);
+		first_c = total - ft_strlen(s);
 		while(*s)
 			s++;
 		s--;
 		while(ft_isspace(*s))
 			 s--;
-		last_c = ft_strlen(s);
-		ret_s = (char *)ft_memalloc((total - last_c) - (total - first_c));
-		printf("%s\n", ret_s);
-		while(last_c <= first_c)
-			*ret_s++ = s[last_c++];
-		return(ret_s);
+		last_c = total - ft_strlen(s);
+		ret_s = ft_alt_strsub(original, first_c, last_c);
+		if(ret_s)
+			return(ret_s);
 	}
 	return(NULL);
-}
-
-int main()
-{
-	char *s = " hello ";
-	printf("test : %s\n", s);
-	printf("test : %s\n", ft_strtrim((char const *)s));
-	return(0);
 }

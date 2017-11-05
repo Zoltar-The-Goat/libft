@@ -1,23 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/11 00:49:04 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/03 11:06:07 by ananelli         ###   ########.fr       */
+/*   Created: 2017/09/25 15:59:12 by ananelli          #+#    #+#             */
+/*   Updated: 2017/09/25 15:59:20 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr(char *str)
+void ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	int index;
 
-	index = -1;
-	if(str)
-		while (str[++index] != '\0')
-			ft_putchar(str[index]);
+
 }

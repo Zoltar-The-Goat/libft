@@ -14,8 +14,20 @@
 
 char *ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {
-	// check piscine for these files too
-	s1 = (char *)s2;
-	n = 0;
+	char* str1;
+	char* str2;
+
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	if(!*str2)
+		return(s1);
+
+	while(*str1)
+		str1++;
+
+	while(*str2 && n--)
+		*str1++ = *str2++;
+
+	*str1 = '\0';
 	return(s1);
 }

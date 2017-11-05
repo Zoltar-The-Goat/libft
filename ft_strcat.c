@@ -12,8 +12,20 @@
 
 char * ft_strcat(char *restrict s1, const char *restrict s2)
 {
-	// check piscine for these files
+	char* str1;
+	char* str2;
 
-	s1 = (char *restrict)s2;
-	return((char *)s1);
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	if(!*str2)
+		return(s1);
+
+	while(*str1)
+		str1++;
+
+	while(*str2)
+		*str1++ = *str2++;
+		
+	*str1 = '\0';
+	return(s1);
 }

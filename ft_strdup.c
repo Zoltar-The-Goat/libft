@@ -16,6 +16,8 @@ char	*ft_strdup(char *src)
 {
 	char *dest;
 
-	dest = (char*)malloc(ft_strlen(src));
-	return (ft_strcpy(dest, src));
+	dest = (char *)ft_memalloc(ft_strlen(src) + 1);
+	if(dest)
+		return (ft_strcpy(dest, src));
+	return(NULL);
 }

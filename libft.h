@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 14:34:32 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/16 19:28:24 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/10/24 02:14:04 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-// REMOVE WHEN DONE !!!!
-#include <stdio.h>
-// REMOVE WHEN DONE !!!!
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -39,22 +35,12 @@ typedef struct s_list
 	int		ft_strlen(const char *str);
 	int 	ft_isspace(char c);
 	int		ft_strlen(const char *str);
+	int 	ft_wordcount(char *s, char c);
 
 	void	*ft_memalloc(size_t size);
 	void 	*ft_memset(void *b, int c, size_t len);
 	char	*ft_strnew(size_t size);
 	char	*ft_strcpy(char *dest, char *src);
-
+	char 	*ft_alt_strsub(char const *s, unsigned int start, unsigned int end);
+	char 	*ft_strsub(char const *s, unsigned int start, size_t len);
 #endif
-
-
-
-
-
-
-
-
-
-
-
-
