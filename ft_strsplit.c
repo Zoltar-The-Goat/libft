@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 15:55:13 by ananelli          #+#    #+#             */
-/*   Updated: 2017/11/07 11:07:33 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 12:19:19 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,19 @@ static void	init_var(int *x, int *slen, char **orig, char const *s)
 	*slen = ft_strlen((char *)s);
 }
 
+int ft_check_empty(char const *s, char c)
+{
+	if (*s == '\0')
+		return (0);
+	while (*s == c)
+	{
+		if (*s == '\0')
+			return (0);
+		s++;
+	}
+	return (1);
+}
+
 char		**ft_strsplit(char const *s, char c)
 {
 	char	*orig;
@@ -30,12 +43,12 @@ char		**ft_strsplit(char const *s, char c)
 	int		c1;
 	int		x;
 
-	if (s && c)
+	if (s && c && ft_check_empty(s, c))
 	{
 		init_var(&x, &slen, &orig, s);
 		if ((ret_arr = (char **)ft_memalloc(sizeof(char **) * W_COUNT + 1)))
 		{
-			while (W_COUNT > x && s)
+			while (W_COUNT >= x && s)
 			{
 				while (*s && *s == c)
 					s++;
@@ -51,11 +64,11 @@ char		**ft_strsplit(char const *s, char c)
 	return (NULL);
 }
 
-
+//
 // int main(int ac, char ** av)
 // {
-// 	char **test = ft_strsplit("***salut****!**", '*');
-// 	printf("\n%s, %s\n", test[0], test[1]);
+// 	char **test = ft_strsplit("*****", '*');
+// 	printf("\n%s, %s\n\n", test[0], test[1]);
 //
 // 	return(0);
 // }
