@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 14:34:32 by ananelli          #+#    #+#             */
-/*   Updated: 2017/11/07 05:41:36 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 11:14:40 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ int				ft_isspace(char c);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strequ(char const *s1, char const *s2);
-int				ft_strlen(const char *str);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_strnequ(const char *s1, const char*s2, size_t n);
 int				ft_tolower(int c);
@@ -90,5 +89,5 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list			*ft_lstnew(void const *content, size_t content_size);
 
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
-
+size_t			ft_strlen(const char *str);
 #endif

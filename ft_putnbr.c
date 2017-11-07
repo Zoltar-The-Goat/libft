@@ -6,7 +6,7 @@
 /*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 00:30:51 by zoltar            #+#    #+#             */
-/*   Updated: 2017/11/07 06:42:22 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 11:12:11 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,14 @@
 void	ft_putnbr(int n)
 {
 	if (n == -2147483648)
-	{
-		ft_putchar('-');
+	{	ft_putchar('-');
 		ft_putchar('2');
 		ft_putnbr(147483648);
 	}
 	if (n < 0)
 	{
 		ft_putchar('-');
-		n = n * -1;
+		n *= -1;
 	}
 	if (n >= 9)
 		ft_putnbr(n / 10);

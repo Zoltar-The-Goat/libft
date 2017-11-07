@@ -6,9 +6,11 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 15:55:13 by ananelli          #+#    #+#             */
-/*   Updated: 2017/11/07 06:44:19 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 11:07:33 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 #include "libft.h"
 #define W_COUNT (ft_wordcount((char *)s, c))
@@ -48,3 +50,12 @@ char		**ft_strsplit(char const *s, char c)
 	}
 	return (NULL);
 }
+
+
+// int main(int ac, char ** av)
+// {
+// 	char **test = ft_strsplit("***salut****!**", '*');
+// 	printf("\n%s, %s\n", test[0], test[1]);
+//
+// 	return(0);
+// }

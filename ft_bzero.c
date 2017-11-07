@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 16:11:40 by ananelli          #+#    #+#             */
-/*   Updated: 2017/11/07 01:21:50 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 11:16:30 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	memset(s, 0, n);
+	ft_memset(s, 0, n);
 }
