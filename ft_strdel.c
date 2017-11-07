@@ -6,15 +6,15 @@
 /*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/23 06:40:32 by zoltar            #+#    #+#             */
-/*   Updated: 2017/10/03 01:58:22 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 01:28:41 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strdel(char **as)
+void	ft_strdel(char **as)
 {
-	if(as)
+	if (as)
 	{
 		free(*as);
 		*as = NULL;

@@ -6,15 +6,15 @@
 /*   By: zoltar <zoltar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/21 00:30:51 by zoltar            #+#    #+#             */
-/*   Updated: 2017/10/03 11:14:38 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 06:42:22 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
-	if(n == -2147483648)
+	if (n == -2147483648)
 	{
 		ft_putchar('-');
 		ft_putchar('2');

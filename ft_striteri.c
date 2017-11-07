@@ -6,15 +6,16 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 13:32:41 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/03 11:29:14 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 01:59:21 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int c;
+
 	c = 0;
-	if(s && f)
-		while(*s && s)
+	if (s && f)
+		while (*s && s)
 			f((unsigned int)c++, s++);
 }

@@ -6,36 +6,32 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 15:57:21 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/25 15:57:32 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 04:33:43 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// typedef struct s_list
-// {
-// 	void *content;
-// 	size_t content_size;
-// 	struct s_list *next;
-// } t_list;
-
-t_list * ft_lstnew(void const *content, size_t content_size)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	t_list *nlist;
+	t_list *nlst;
 
-	nlist = (t_list *)ft_memalloc(sizeof(t_list));
-	if(nlist == NULL)
-		return(NULL);
-	if(content == NULL)
+	nlst = (t_list *)ft_memalloc(sizeof(t_list));
+	if (nlst == NULL)
+		return (NULL);
+	if (content == NULL)
 	{
-		nlist->content = NULL;
-		nlist->content_size = 0;
+		nlst->content = NULL;
+		nlst->content_size = 0;
 	}
 	else
 	{
-		nlist->content = content;
-		nlist->content_size = content_size;
+		nlst->content = (void *)ft_memalloc(content_size);
+		if (nlst->content == NULL)
+			return (NULL);
+		ft_memcpy(nlst->content, content, content_size);
+		nlst->content_size = content_size;
 	}
-	nlist->next = NULL;
-	return(nlist);
+	nlst->next = NULL;
+	return (nlst);
 }

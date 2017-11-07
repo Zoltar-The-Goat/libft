@@ -6,13 +6,13 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 16:11:40 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/03 02:54:01 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 01:21:50 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	memset(s, 0, n);
 }

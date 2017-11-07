@@ -6,7 +6,7 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 15:55:41 by ananelli          #+#    #+#             */
-/*   Updated: 2017/09/26 17:41:20 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 06:24:48 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,60 +21,68 @@ static char	*ft_intmin(void)
 	return (buf);
 }
 
-char *ft_itoa(int n)
+static int	ft_is_neg(int *n, int *size, int *temp, char *sign)
 {
-	int size;
-	int start;
-	int temp;
-	char sign;
-	char *ret;
+	*size = 0;
+	*temp = *n;
+	*sign = '+';
+	if (*n == -2147483648)
+		return (1);
+	else if (*n < 0)
+	{
+		*sign = '-';
+		*temp *= -1;
+		*n *= -1;
+		*size += 1;
+	}
+	return (0);
+}
 
-	size = 0;
+static void	ft_set_size(int *temp, int *size)
+{
+	while (*temp > 9)
+	{
+		*temp /= 10;
+		*size += 1;
+	}
+	*size += 1;
+}
+
+static void	final(char *ret, char *sign, int *n)
+{
+	ret[0] = (*n % 10) + 48;
+	if (*sign == '-')
+	{
+		ret[0] = '-';
+		ret[1] = (*n % 10) + 48;
+	}
+}
+
+char		*ft_itoa(int n)
+{
+	int		size;
+	int		start;
+	int		temp;
+	char	sign;
+	char	*ret;
+
 	start = 0;
-	temp = n;
-	sign = '+';
-
-	if(n == -2147483648)
+	if (ft_is_neg(&n, &size, &temp, &sign))
 		return (ft_intmin());
-	else if(n < 0)
-	{
-		sign = '-';
-		temp *= -1;
-		n *= -1;
-		size++;
-	}
-	while(temp > 9)
-	{
-		temp /= 10;
-		size++;
-	}
-	size++;
+	ft_set_size(&temp, &size);
 	ret = (char *)ft_memalloc(size + 1);
-	if(ret)
+	if (ret)
 	{
 		ret[size + 1] = '\0';
-		while(n > 9)
+		while (n > 9)
 		{
-			while(start < size)
+			while (start < size)
 				ret[start++] = (n % 10) + 48;
 			size--;
 			start = 0;
 			n /= 10;
 		}
-		ret[0] = (n % 10) + 48;
-		if(sign == '-')
-		{
-			ret[0] = '-';
-			ret[1] = (n % 10) + 48;
-		}
+		final(ret, &sign, &n);
 	}
-	return(ret);
+	return (ret);
 }
-
-
-//
-// int main()
-// {
-// 	printf("\nvalue: %s\n", ft_itoa(-2147483648));
-// 	return(1);
-// }

@@ -6,11 +6,11 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 16:32:35 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/03 11:42:19 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 01:29:55 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		c += 32;

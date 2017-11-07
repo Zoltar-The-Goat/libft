@@ -6,13 +6,13 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/23 20:13:27 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/24 02:22:10 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 01:17:30 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_wordcount(char *s, char c)
+int	ft_wordcount(char *s, char c)
 {
 	int i;
 	int flag;
@@ -21,18 +21,18 @@ int ft_wordcount(char *s, char c)
 	i = 0;
 	num = 0;
 	flag = 0;
-	while(s[i])
+	while (s[i])
 	{
-		if(s[i] == c)
+		if (s[i] == c)
 		{
 			flag = 0;
 		}
-		else if(s[i] != c && flag == 0)
+		else if (s[i] != c && flag == 0)
 		{
 			flag = 1;
 			num++;
 		}
 		i++;
 	}
-	return(num);
+	return (num);
 }

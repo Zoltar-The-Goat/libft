@@ -6,15 +6,15 @@
 /*   By: ananelli <ananelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 11:42:31 by ananelli          #+#    #+#             */
-/*   Updated: 2017/10/03 00:46:29 by ananelli         ###   ########.fr       */
+/*   Updated: 2017/11/07 01:27:02 by ananelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_memdel(void **ap)
+void	ft_memdel(void **ap)
 {
-	if(ap)
+	if (ap)
 	{
 		free(*ap);
 		*ap = NULL;
