@@ -20,44 +20,36 @@ static int	ft_is_atoi_space(char c)
 	return (0);
 }
 
-static void	ft_is_neg(char c, int *sign, int *count)
+static int	ft_is_neg(char c, int *i)
 {
 	if (c == '-')
 	{
-		*sign = -1;
-		*count += 1;
-	}
-	else if (c == '+')
-	{
-		*count += 1;
-	}
+		*i += 1;
+		return(-1);
+	}else if (c == '+')
+		*i += 1;
+	return(1);
 }
 
-int			ft_atoi(char *str)
+int		ft_atoi(char *str)
 {
-	int				num;
-	int				count;
-	int				sign;
-	unsigned int	n;
+	int i;
+	int num;
+	int sign;
 
-	sign = 1;
-	count = 0;
 	num = 0;
-	while (ft_is_atoi_space(str[count]))
-		count++;
-	ft_is_neg(str[count], &sign, &count);
-	while (str[count] != '\0')
+	sign = 0;
+	i = 0;
+	while (ft_is_atoi_space(str[i]))
+		i++;
+	sign = ft_is_neg(str[i], &i);
+	while (str[i] && ft_isdigit(str[i]))
 	{
-		if (ft_isdigit(str[count]) == 0)
-			break ;
-		else if (str[count] == ' ')
-			return (0);
-		n = num;
-		n = n * 10 + str[count] - '0';
-		if ((sign == -1 && n > 2147483648) || (sign == 1 && n > 2147483647))
-			return (0);
-		num = num * 10 + (str[count] - '0');
-		count++;
+		num *= 10;
+		num += (int)str[i] - '0';
+		i++;
 	}
-	return (sign * num);
+	if (sign < 0)
+		return (-num);
+	return (num);
 }

@@ -10,65 +10,45 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 #include "libft.h"
-#define W_COUNT (ft_wordcount((char *)s, c))
 
-static void	init_var(int *x, int *slen, char **orig, char const *s)
+static char		**ft_real_split(char **split_arr, char *str, char c, size_t w_count)
 {
-	*x = 0;
-	*orig = (char *)s;
-	*slen = ft_strlen((char *)s);
-}
+	size_t		i;
+	size_t		start;
+	size_t		curr_count;
 
-int ft_check_empty(char const *s, char c)
-{
-	if (*s == '\0')
-		return (0);
-	while (*s == c)
+	i = 0;
+	start = 0;
+	curr_count = 0;
+	while (str[i] != '\0' && curr_count < w_count)
 	{
-		if (*s == '\0')
-			return (0);
-		s++;
+		if (str[i] != c)
+		{
+			start = i;
+			while (str[i] != c && str[i] != '\0')
+				i++;
+			split_arr[curr_count] = ft_strsub(str, start, i - start);
+			curr_count++;
+		}
+		else
+			i++;
 	}
-	return (1);
+	split_arr[curr_count] = NULL;
+	return (split_arr);
 }
 
 char		**ft_strsplit(char const *s, char c)
 {
-	char	*orig;
 	char	**ret_arr;
-	int		slen;
-	int		c1;
-	int		x;
+	size_t count;
 
-	if (s && c && ft_check_empty(s, c))
-	{
-		init_var(&x, &slen, &orig, s);
-		if ((ret_arr = (char **)ft_memalloc(sizeof(char **) * W_COUNT + 1)))
-		{
-			while (W_COUNT >= x && s)
-			{
-				while (*s && *s == c)
-					s++;
-				c1 = slen - ft_strlen(s);
-				while (*s && *s != c)
-					s++;
-				ret_arr[x++] = ft_alt_strsub(orig, c1, slen - ft_strlen(s) - 1);
-			}
-			ret_arr[x] = NULL;
-			return (ret_arr);
-		}
-	}
-	return (NULL);
+	if (!s)
+		return (NULL);
+	count = ft_wordcount((char*)s, c);
+	ret_arr = NULL;
+	if ((ret_arr = (char **)ft_memalloc(sizeof(char *) * count + 1)) == NULL)
+		return (NULL);
+	ret_arr = ft_real_split(ret_arr, (char *)s, c, count);
+	return (ret_arr);
 }
-
-//
-// int main(int ac, char ** av)
-// {
-// 	char **test = ft_strsplit("*****", '*');
-// 	printf("\n%s, %s\n\n", test[0], test[1]);
-//
-// 	return(0);
-// }
